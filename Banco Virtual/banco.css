@@ -1,0 +1,360 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    scrollbar-color: #94a3b8 #151f32;
+    scrollbar-width: thin;
+}
+
+body {
+    background-color: #0b1120;
+    color: #f8fafc;
+}
+
+header {
+    position: relative;
+    display: grid;
+    justify-content: space-around;
+    grid-template-areas: 
+    "titulo titulo perfil";
+    gap: 10px;
+    top: 20px;
+}
+
+header p {
+    color:  #94a3b8;
+}
+
+.hr {
+    grid-column: 1/4;
+}
+
+hr {
+    background-color: #94a3b8;
+}
+
+.billetera-vitural {
+    grid-area: titulo;
+    grid-template-columns: repeat(2, minmax(100px, 1fr) 1fr);
+}
+
+.perfil {
+    grid-area: perfil;
+    align-self: center;
+}
+
+.main-padre {
+    position: relative;
+    display: grid;
+    top: 50px;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: repeat(2, minmax(100px, 1fr));
+    justify-content: center;
+    grid-template-areas: 
+    "saldo ingresos gastos"
+    "movimiento historial contacto";
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-padre h3 {
+    color: #94a3b8;
+}
+
+.main-padre h4 {
+    color: #94a3b8;
+}
+
+.saldo-disponible {
+    background-color: #151f32;
+    border: 2px solid #0b1120;
+    grid-area: saldo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+}
+
+
+
+.total-ingresos {
+    background-color: #151f32;
+    border: 2px solid #0b1120;
+    color: #10b981;
+    grid-area: ingresos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.total-gastos {
+    background-color: #151f32;
+    border: 2px solid #0b1120;
+    color: #ef4444;
+    grid-area: gastos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.movimiento h3 {
+    color: #f8fafc;
+}
+
+.movimiento p {
+    color: #94a3b8;
+}
+
+button {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 10px;
+    border: 1px solid #94a3b8;
+    border-radius: 10px;
+    transition: color,border-color, ease 1s;
+}
+
+.boton-ingresos {
+    width: 100px;
+}
+
+.boton-gastos {
+    width: 100px;
+}
+
+.boton-ingresos:hover {
+    color: #10b981;
+    border-color: #10b981;
+}
+
+.boton-gastos:hover {
+    color: #ef4444;
+    border-color: #ef4444;
+}
+
+.movimiento {
+    background-color: #151f32;
+    border: 2px solid #0b1120;
+    grid-area: movimiento;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 12px;
+}
+
+.monto {
+    padding: 12px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #0f172a;
+    border: 1px solid #0f172a;
+    color: #f8fafc;
+}
+
+.monto:focus {
+    outline: none;
+    border: 1px solid #2563eb;
+}
+
+.tipo-monto:focus {
+    outline: none;
+    border: 1px solid #2563eb;
+}
+
+.tipo-monto {
+    padding: 12px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #0f172a;
+    border: 1px solid #0f172a;
+    color: #f8fafc;
+}
+
+.registrar {
+    background-color: #2563eb;
+    color: #f8fafc;
+    width: 200px;
+    transition: background-color, ease 1s;
+}
+
+.registrar:hover {
+    background-color:  rgba(37, 99, 235, 0.15);
+}
+
+.historial-padre {
+    background-color: #151f32;
+    border: 2px solid #0b1120;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    align-items: flex-start;
+    padding: 26px;
+    align-content: flex-start;
+    overflow: auto;
+    gap: 24px;
+    grid-area: historial;
+}
+
+.todos {
+    background-color: #2563eb;
+    color: #f8fafc;
+}
+
+.usuario-tabla {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+    gap: 10px;
+}
+
+.usuario-tabla  p{
+    color: #10b981;
+}
+
+.boton-padre {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.opciones {
+    display: grid;
+    grid-template-areas: 
+    "moti  mont ";
+    gap: 90px;
+}
+
+.opciones-movitos {
+    grid-area: moti;
+}
+
+.opciones-monto {
+    grid-area: mont;
+}
+
+.movimientoV1 {
+    width: 100%;
+    text-align: center;
+}
+
+.mensajeV2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto {
+    background-color: #151f32;
+    border: 2px solid #0b1120;
+    grid-area: contacto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+}
+
+.padre-redes {
+    display: flex;
+    gap: 40px;
+}
+
+.redesV2 i {
+    color: hotpink;
+}
+
+.padre-infromacion {
+    text-align: center;
+}
+
+.informacion {
+    gap: 20px;
+    color: #94a3b8;
+}
+
+a {
+    text-decoration: none;
+    color: #94a3b8;
+}
+
+.instagram {
+    transition: color, ease 1s;
+}
+
+.github {
+    transition: color, ease 1s;
+}
+
+.github:hover {
+    color: #f8fafc;
+}
+
+.instagram:hover {
+    color: hotpink;
+}
+
+.informacion-p {
+    text-align: center;
+}
+
+.lenguajes {
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+}
+
+#html {
+    transition: color, ease 1s;
+}
+
+#html:hover {
+    color: coral;
+}
+
+#css {
+    transition: color, ease 1s;
+}
+
+#css:hover {
+    color: darkmagenta;
+}
+
+#javascript {
+    transition: color, ease 1s;
+}
+
+#javascript:hover {
+    color: gold;
+}
+
+#perfil-hijo {
+    font-size: 24px;
+    color: #94a3b8;
+    transition: color, ease 1s;
+}
+
+#perfil-hijo:hover {
+    color: #f8fafc;
+}
+
+h5 {
+    color: #94a3b8;
+    
+}
