@@ -123,6 +123,10 @@ button {
     transition: color,border-color, ease 1s;
 }
 
+input {
+    text-align: center;
+}
+
 .boton-ingresos {
     width: 100px;
 }
